@@ -1,7 +1,10 @@
 <template>
   <div class="about">
     <h1 class="label">
-      <i>All Images of {{ dogName | capitalize }} {{ dogSubBreedName | capitalize  }}</i>
+      <i
+        >All Images of {{ dogName | capitalize }}
+        {{ dogSubBreedName | capitalize }}</i
+      >
     </h1>
 
     <button class="btn btn-secondary" @click="goHome()">Home</button>
@@ -11,7 +14,6 @@
         <img :src="dogImage" class="dogimage" />
       </tr>
     </table>
-
   </div>
 </template>
 <script>
@@ -30,9 +32,9 @@ export default {
       this.dogAllImageArray = res.data.message;
     });
   },
-  methods:{
-    goHome(){
-      this.$router.push('/');
+  methods: {
+    goHome() {
+      this.$router.push("/");
     }
   }
 };
@@ -55,7 +57,7 @@ export default {
   background-color: black;
 }
 .label {
-  color:white;
+  color: white;
 }
 .grid:hover {
   transform: scale(1.5);

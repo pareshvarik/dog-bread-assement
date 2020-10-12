@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">Dog Bread Application</b-navbar-brand>
+      <b-navbar-brand href="#">Dog Breed Application</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <search :dogBreadName="dogsBreadList" :dogObjectDatails="$store.state.dogBreadObject" />
       </b-navbar-nav>

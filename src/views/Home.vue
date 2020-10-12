@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">Dog Bread Application</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <search :dogBreadName="dogsBreadList" :dogObjectDatails="dogObject" />
+        <search :dogBreadName="dogsBreadList" :dogObjectDatails="$store.state.dogBreadObject" />
       </b-navbar-nav>
     </b-navbar>
     <div v-for="(dog, index) in dogsBreadList" :key="index">
@@ -49,10 +49,10 @@ export default {
     };
   },
   created() {
-    
+    this.$store.dispatch("getAllBreadList")
     getAllDogsList().then(res => {
       this.dogsBreadList = Object.keys(res.data.message);
-      this.dogObject = res.data.message;
+      // this.dogObject = res.data.message;
       this.dogsBreadList.map(dogname => {
         getDogRandomImage(dogname).then(res => {
           this.dogRandomImage.push(res.data.message);

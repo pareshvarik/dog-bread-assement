@@ -3,6 +3,9 @@
     <h1 class="label">
       <i>All Images of {{ dogName | capitalize }} {{ dogSubBreedName | capitalize  }}</i>
     </h1>
+
+    <button class="btn btn-secondary" @click="goHome()">Home</button>
+
     <table>
       <tr v-for="dogImage in dogAllImageArray" :key="dogImage" class="grid">
         <img :src="dogImage" class="dogimage" />
@@ -26,6 +29,11 @@ export default {
     getAllDogImage(this.dogName, this.dogSubBreedName).then(res => {
       this.dogAllImageArray = res.data.message;
     });
+  },
+  methods:{
+    goHome(){
+      this.$router.push('/');
+    }
   }
 };
 </script>

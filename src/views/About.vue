@@ -26,7 +26,6 @@ export default {
     getAllDogImage(this.dogName, this.dogSubBreedName).then(res => {
       this.dogAllImageArray = res.data.message;
     });
-    console.log(this.dogAllImageArray);
   }
 };
 </script>

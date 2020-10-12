@@ -2,13 +2,13 @@
   <div class="Search">
     <label class="label">Search Breed </label>
     <select v-model="searchData">
-      <option v-for="d in dogBreadName" :key="d">{{ d | capitalize}}</option>
+      <option v-for="dogname in dogBreadName" :key="dogname">{{ dogname}}</option>
     </select>
     <span v-if="subBreed.length > 0">
       <!-- <br /> -->
-      <label class="label">Please select sub breed of {{ searchData | capitalize }}  </label>
+      <label class="label">Please select sub breed of {{ searchData  }}  </label>
       <select v-model="subBreedName">
-        <option v-for="sb in subBreed" :key="sb">{{ sb | capitalize }}</option>
+        <option v-for="sb in subBreed" :key="sb">{{ sb  }}</option>
       </select>
     </span>
   </div>
@@ -28,15 +28,16 @@ export default {
     dogBreadName: {
       type: Array
     },
-    dogObject: {
+    dogObjectDatails: {
       type: Object
     }
   },
   watch: {
     searchData() {
-      if (this.dogObject[this.searchData].length > 0) {
-        this.subBreed = this.dogObject[this.searchData];
-      } else {
+      if (this.dogObjectDatails[this.searchData].length > 0) {
+        this.subBreed = this.dogObjectDatails[this.searchData];
+      } 
+      else {
         this.$router.push({ name: "About", params: { name: this.searchData } });
       }
     },

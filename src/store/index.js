@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    dogBreadObject: []
+    dogBreadObject: {}
   },
   mutations: {
     SET_ALLBREEDS(state, dogBreadList) {

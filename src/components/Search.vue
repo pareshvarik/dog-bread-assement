@@ -26,6 +26,9 @@ export default {
       subBreedName: ""
     };
   },
+  created () {
+    console.log(this.dogObjectDatails);;
+  },
   props: {
     dogBreadName: {
       type: Array
@@ -37,7 +40,9 @@ export default {
   watch: {
     searchData() {
       if (this.dogObjectDatails[this.searchData].length > 0) {
+        console.log(this.searchData);
         this.subBreed = this.dogObjectDatails[this.searchData];
+        console.log(this.subBreed);
       } else {
         this.$router.push({ name: "About", params: { name: this.searchData } });
       }

@@ -6,18 +6,19 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    dogBreadObject: {}
+    dogBreedObject: {},
   },
   mutations: {
-    SET_ALLBREEDS(state, dogBreadList) {
-      state.dogBreadObject = dogBreadList;
+    setBreedObject(state, dogBreedList) {
+      state.dogBreedObject = dogBreedList;
     }
   },
+  
   actions: {
     async getAllBreadList(state) {
-      const dogBreadListResult = await getAllBread();
-      const dogBreadList = dogBreadListResult.data["message"];
-      state.commit("SET_ALLBREEDS", dogBreadList);
+      let dogBreedListResult = await getAllBread();
+      let dogBreedList = dogBreedListResult.data["message"];
+      state.commit("setBreedObject", dogBreedList);
     }
   },
   modules: {}

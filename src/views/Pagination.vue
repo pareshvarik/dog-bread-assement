@@ -5,18 +5,16 @@
       <b-navbar-nav class="ml-auto">
         <search
           :dogBreadName="dogsBreadList"
-          :dogObjectDatails="$store.state.dogBreadObject"
-          
-          />
-          <!-- :dogObjectDatails="dogObject" -->
-        
+          :dogObjectDatails="$store.state.dogBreedObject"
+        />
       </b-navbar-nav>
     </b-navbar>
-    <div v-for="(dog, index) in dogsBreadList" :key="index">
+    <!-- cards to display dog -->
+    <div v-for="dog in dogBreed" :key="dog.breedName">
       <div class="cardbody">
         <b-card
-          :title="dog | capitalize"
-          :img-src="dogRandomImage[index]"
+          :title="dog.breedName | capitalize"
+          :img-src="dog.breedImage"
           img-alt="Image"
           img-height="200"
           img-width="200"
@@ -49,22 +47,17 @@ export default {
   data() {
     return {
       dogsBreadList: [],
-      dogRandomImage: [],
+      breed: { breedName: "", breedImage: "" },
       dogObject: {},
       searchDogName: [],
+      dogBreed: [],
     };
   },
   created() {
     this.$store.dispatch("getAllBreadList");
     getAllDogsList().then((res) => {
       this.dogsBreadList = Object.keys(res.data.message);
-      // this.dogObject = res.data.message;
-      this.dogsBreadList.map((dogname) => {
-
-       getDogRandomImage(dogname).then((res) => {
-          this.dogRandomImage.push(res.data.message);
-        });
-      });
+      this.createBreedList(this.dogsBreadList);
     });
   },
   methods: {
@@ -74,6 +67,15 @@ export default {
         name: "About",
         params: { name: this.searchDogName },
       });
+    },
+    async createBreedList(breedsKeys) {
+      for (let index = 0; index < breedsKeys.length; index++) {
+        let image = await getDogRandomImage(breedsKeys[index]).then((res) => {
+          return res.data.message;
+        });
+        this.Breed = { breedName: breedsKeys[index], breedImage: image };
+        this.dogBreed.push(this.Breed);
+      }
     },
   },
   watch: {

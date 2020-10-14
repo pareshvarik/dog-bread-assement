@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Pagination from "../views/Pagination.vue";
+// import Pagination from "../views/Pagination.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,11 +19,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
-  {
-    path: "/Pagination",
-    name: "Pagination",
-    component: Pagination,
-  },
+  
 ];
 
 const router = new VueRouter({

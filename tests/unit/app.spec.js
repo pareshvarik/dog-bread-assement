@@ -1,7 +1,7 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
-import VueRouter from 'vue-router';
-import app from '@/App.vue';
-
+import VueRouter from "vue-router";
+import app from "@/App.vue";
+import footer from "@/components/Footer.vue";
 // describe("HelloWorld.vue", () => {
 //   it("renders props.msg when passed", () => {
 //     const msg = "new message";
@@ -17,11 +17,10 @@ import app from '@/App.vue';
 //   expect(wrapper.isVueInstance()).toBeTruthy();
 // })
 
-describe('In App Component',()=>{
+describe("In App Component", () => {
   let appWrapper;
-  const router=new VueRouter({ path:'/', name: 'Home'});
+  const router = new VueRouter({ path: "/", name: "Home" });
 
-  
   beforeEach(() => {
     const localVue = createLocalVue();
     localVue.use(VueRouter);
@@ -35,15 +34,40 @@ describe('In App Component',()=>{
   afterEach(() => {
     appWrapper.destroy();
   });
-  it('is a Vue instance', () => {
+  it("is a Vue instance", () => {
     expect(appWrapper.isVueInstance).toBeTruthy();
   });
 
-  it('renders the correct markup', () => {
+  it("renders the correct markup", () => {
     expect(appWrapper.html()).toContain('<div id="app">');
   });
 
   it('it should have a div element with id="app"', () => {
-    expect(appWrapper.attributes('id')).toBe('app');
+    expect(appWrapper.attributes("id")).toBe("app");
   });
+  //for router tag tesing
+  it("it should have a <router-view-stub></router-view-stub>", () => {
+    expect(appWrapper.html()).toContain("<router-view-stub name=\"default\"></router-view-stub>");
+  });
+
+  //for footer testing
+  it("it should load the footer", () => {
+    expect(footer).toBeTruthy();
+  });
+
+  it("it should have a <footer-stub></footer-stub>", () => {
+    expect(appWrapper.html()).toContain("<footer-stub></footer-stub>");
+  });
+
 });
+
+// describe("it should load Footer component", () => {
+//   it("it should load the footer", () => {
+//     expect(footer).toBeTruthy();
+//   });
+
+//   it("it should have a <footer-stub></footer-stub>", () => {
+//     console.log(appWrapper.html());
+//     expect(appWrapper.html()).toContain("<footer-stub></footer-stub>");
+//   });
+// });

@@ -1,4 +1,27 @@
 TN:
+SF:C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\App.vue
+FNF:0
+FNH:0
+DA:8,1
+LF:1
+LH:1
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\components\Footer.vue
+FN:13,(anonymous_1)
+FNF:1
+FNH:1
+FNDA:3,(anonymous_1)
+DA:9,2
+DA:14,3
+LF:2
+LH:2
+BRF:0
+BRH:0
+end_of_record
+TN:
 SF:C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\components\Search.vue
 FN:22,(anonymous_1)
 FN:29,(anonymous_2)
@@ -29,6 +52,18 @@ BRF:4
 BRH:0
 end_of_record
 TN:
+SF:C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\filters\dateFilter.js
+FN:2,(anonymous_0)
+FNF:1
+FNH:1
+FNDA:4,(anonymous_0)
+DA:2,4
+LF:1
+LH:1
+BRF:0
+BRH:0
+end_of_record
+TN:
 SF:C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\router\index.js
 FN:10,(anonymous_0)
 FN:19,(anonymous_1)
@@ -36,13 +71,13 @@ FNF:2
 FNH:0
 FNDA:0,(anonymous_0)
 FNDA:0,(anonymous_1)
-DA:4,0
-DA:6,0
+DA:4,1
+DA:6,1
 DA:11,0
 DA:20,0
-DA:25,0
+DA:30,1
 LF:5
-LH:0
+LH:3
 BRF:0
 BRH:0
 end_of_record
@@ -155,6 +190,18 @@ DA:78,0
 DA:79,0
 DA:85,0
 LF:16
+LH:0
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\views\PageNotFound.vue
+FN:17,(anonymous_1)
+FNF:1
+FNH:0
+FNDA:0,(anonymous_1)
+DA:18,0
+LF:1
 LH:0
 BRF:0
 BRH:0

@@ -61,13 +61,3 @@ describe("In App Component", () => {
 
 });
 
-// describe("it should load Footer component", () => {
-//   it("it should load the footer", () => {
-//     expect(footer).toBeTruthy();
-//   });
-
-//   it("it should have a <footer-stub></footer-stub>", () => {
-//     console.log(appWrapper.html());
-//     expect(appWrapper.html()).toContain("<footer-stub></footer-stub>");
-//   });
-// });

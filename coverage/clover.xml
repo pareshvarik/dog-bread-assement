@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1602678990342" clover="3.2.0">
-  <project timestamp="1602678990342" name="All files">
-    <metrics statements="54" coveredstatements="7" conditionals="6" coveredconditionals="0" methods="29" coveredmethods="2" elements="89" coveredelements="9" complexity="0" loc="54" ncloc="54" packages="7" files="10" classes="10"/>
+<coverage generated="1602735884393" clover="3.2.0">
+  <project timestamp="1602735884393" name="All files">
+    <metrics statements="54" coveredstatements="9" conditionals="6" coveredconditionals="0" methods="29" coveredmethods="4" elements="89" coveredelements="13" complexity="0" loc="54" ncloc="54" packages="7" files="10" classes="10"/>
     <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.vue" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\App.vue">
@@ -10,16 +10,16 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="11" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <metrics statements="11" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="3"/>
       <file name="Footer.vue" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\components\Footer.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="2" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
       </file>
       <file name="Search.vue" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\components\Search.vue">
-        <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <metrics statements="9" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
         <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="43" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
@@ -40,11 +40,11 @@
       <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.js" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\router\index.js">
         <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.service">

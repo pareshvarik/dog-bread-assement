@@ -3,10 +3,7 @@
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">Dog Breed Application</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <search
-          :dogBreadName="dogsBreadList"
-          :dogObjectDatails="$store.state.dogBreedObject"
-        />
+        <search/>
       </b-navbar-nav>
     </b-navbar>
     <!-- cards to display dog -->
@@ -54,6 +51,7 @@ export default {
     };
   },
   created() {
+    this.$store.dispatch("getAllBreadObject");
     this.$store.dispatch("getAllBreadList");
     getAllDogsList().then((res) => {
       this.dogsBreadList = Object.keys(res.data.message);
@@ -64,7 +62,6 @@ export default {
     searchData(dogname) {
 
       this.searchDogName = dogname;
-      console.log( this.searchDogName);
       this.$router.push({
         name: "About",
         params: { name: this.searchDogName },

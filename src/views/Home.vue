@@ -51,8 +51,6 @@ export default {
     };
   },
   created() {
-    this.$store.dispatch("getAllBreadObject");
-    this.$store.dispatch("getAllBreadList");
     getAllDogsList().then((res) => {
       this.dogsBreadList = Object.keys(res.data.message);
       this.createBreedList(this.dogsBreadList);

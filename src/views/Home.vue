@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">Dog Breed Application</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <search/>
+        <search />
       </b-navbar-nav>
     </b-navbar>
     <!-- cards to display dog -->
@@ -58,7 +58,6 @@ export default {
   },
   methods: {
     searchData(dogname) {
-
       this.searchDogName = dogname;
       this.$router.push({
         name: "About",

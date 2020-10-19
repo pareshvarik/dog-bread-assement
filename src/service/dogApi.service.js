@@ -18,13 +18,13 @@ export function getHomeDogRandomImage() {
   return axios.get(`https://dog.ceo/api/breeds/image/random/48`);
 }
 
-export function getAllBread() {
-  return axios.get(`https://dog.ceo/api/breeds/list/all`);
-}
-export function getRandomImg(breed_name) {
-  return axios.get(`https://dog.ceo/api/breed/${breed_name}/images/random`);
-}
+// export function getAllBread() {
+//   return axios.get(`https://dog.ceo/api/breeds/list/all`);
+// }
+// export function getRandomImg(breed_name) {
+//   return axios.get(`https://dog.ceo/api/breed/${breed_name}/images/random`);
+// }
 
-export function getBreadImg(name) {
-  return axios.get(`https://dog.ceo/api/breed/${name}/images`);
-}
+// export function getBreadImg(name) {
+//   return axios.get(`https://dog.ceo/api/breed/${name}/images`);
+// }

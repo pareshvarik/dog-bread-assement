@@ -5,7 +5,9 @@
       <p class="lead">Please enter valid URL</p>
       <hr class="my-4" />
       <p>click on Home to redirect to <strong>PUP</strong> store</p>
-      <button class="btn btn-primary btn-lg" @click="goHome()">Home</button>
+      <button id="goHome" class="btn btn-primary btn-lg" @click="goHome()">
+        Home
+      </button>
     </div>
   </div>
 </template>

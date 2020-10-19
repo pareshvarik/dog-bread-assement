@@ -8,7 +8,7 @@
 <script>
 import formattedDate from "../filters/dateFilter.js";
 export default {
-  name: 'Footer',
+  name: "Footer",
   methods: {
     getFormattedDate() {
       return formattedDate();
@@ -21,9 +21,9 @@ export default {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color:rgb(21, 174, 201);
+  background-color: rgb(21, 174, 201);
   color: #000;
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 </style>

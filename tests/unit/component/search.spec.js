@@ -42,7 +42,7 @@ describe("Inside the Search", () => {
   });
   it("check select is present or not", () => {
     console.log(mockStore);
-    expect(searchWrapper.find("select").exists()).toBe(true)
+    expect(searchWrapper.find("select").exists()).toBe(true);
   });
   // it("checks watcher called routes", () => {
   //   searchWrapper.setData({ searchData: 'bulldog' })
@@ -63,5 +63,4 @@ describe("Inside the Search", () => {
   //   wrapper.find('select#dogs').trigger('change');
   //   expect(wrapper.vm.searchData).toEqual('pug');
   // })
-
 });

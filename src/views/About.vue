@@ -24,19 +24,19 @@ export default {
     return {
       dogName: this.$route.params.name,
       dogSubBreedName: this.$route.params.subbreedname,
-      dogAllImageArray: []
+      dogAllImageArray: [],
     };
   },
   created() {
-    getAllDogImage(this.dogName, this.dogSubBreedName).then(res => {
+    getAllDogImage(this.dogName, this.dogSubBreedName).then((res) => {
       this.dogAllImageArray = res.data.message;
     });
   },
   methods: {
     goHome() {
       this.$router.push("/");
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>

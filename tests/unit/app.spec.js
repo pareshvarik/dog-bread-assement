@@ -47,7 +47,9 @@ describe("In App Component", () => {
   });
   //for router tag tesing
   it("it should have a <router-view-stub></router-view-stub>", () => {
-    expect(appWrapper.html()).toContain("<router-view-stub name=\"default\"></router-view-stub>");
+    expect(appWrapper.html()).toContain(
+      '<router-view-stub name="default"></router-view-stub>'
+    );
   });
 
   //for footer testing
@@ -58,6 +60,4 @@ describe("In App Component", () => {
   it("it should have a <footer-stub></footer-stub>", () => {
     expect(appWrapper.html()).toContain("<footer-stub></footer-stub>");
   });
-
 });
-

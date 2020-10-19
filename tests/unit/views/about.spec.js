@@ -14,10 +14,10 @@ describe("Inside the Search", () => {
     localVue.use(VueRouter);
     localVue.use(BootstrapVue);
     localVue.use(IconsPlugin);
-    
+
     aboutWrapper = shallowMount(about, {
       localVue,
-      router
+      router,
     });
     afterEach(() => {
       aboutWrapper.destroy();
@@ -27,5 +27,4 @@ describe("Inside the Search", () => {
     expect(aboutWrapper.isVueInstance).toBeTruthy();
   });
   //need to test the filter capitalize
-  
 });

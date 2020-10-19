@@ -22,10 +22,10 @@ export default {
     return {
       searchData: "",
       subBreed: [],
-      subBreedName: ""
+      subBreedName: "",
     };
   },
-  created () {
+  created() {
     this.$store.dispatch("getAllBreadObject");
     this.$store.dispatch("getAllBreadList");
   },
@@ -41,11 +41,11 @@ export default {
       if (this.subBreed.length > 0) {
         this.$router.push({
           name: "About",
-          params: { name: this.searchData, subbreedname: this.subBreedName }
+          params: { name: this.searchData, subbreedname: this.subBreedName },
         });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

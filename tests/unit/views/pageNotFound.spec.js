@@ -61,4 +61,17 @@ describe("In PageNotFound Component", () => {
     };
     expect(pagenotfoundWrapper.vm.$route.name).toBe($route.name);
   });
+
+  // it("test the goHome",()=>{
+  //   const push = jest.fn();
+  //   const $router = {
+  //   push: jest.fn(),
+  //   };
+  //   mocks: {
+  //   $route,
+  //   $router
+  //   };
+  //   expect(push).toHaveBeenCalledWith('/the-desired-path');
+
+  // })
 });

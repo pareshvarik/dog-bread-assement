@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -140,18 +140,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,13 +189,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;div class="about"&gt;
     &lt;h1 class="label"&gt;
-      &lt;i
-        &gt;All Images of {{ dogName | capitalize }}
-        {{ dogSubBreedName | capitalize }}&lt;/i
-      &gt;
+      &lt;i&gt;
+        All Images of {{ dogName | capitalize }}
+        {{ dogSubBreedName | capitalize }}
+      &lt;/i&gt;
     &lt;/h1&gt;
 &nbsp;
-    &lt;button class="btn btn-secondary" @click="goHome()"&gt;Home&lt;/button&gt;
+    &lt;button id="goHome" class="btn btn-secondary" @click="goHome()"&gt;Home&lt;/button&gt;
 &nbsp;
     &lt;table&gt;
       &lt;tr v-for="dogImage in dogAllImageArray" :key="dogImage" class="grid"&gt;
@@ -205,26 +205,26 @@
   &lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
-import { getAllDogImage } from "../service/dogApi.service.js";
+<span class="cstat-no" title="statement not covered" >import { getAllDogImage } from "../service/dogApi.service.js";</span>
 export default {
   name: "About",
-  data() {
-    return {
+<span class="fstat-no" title="function not covered" >  data() {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
       dogName: this.$route.params.name,
       dogSubBreedName: this.$route.params.subbreedname,
-      dogAllImageArray: []
+      dogAllImageArray: [],
     };
   },
-  created() {
-<span class="fstat-no" title="function not covered" >    getAllDogImage(this.dogName, this.dogSubBreedName).then(res =&gt; {</span>
+<span class="fstat-no" title="function not covered" >  created() {</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    getAllDogImage(this.dogName, this.dogSubBreedName).then((res) =&gt; {</span></span>
 <span class="cstat-no" title="statement not covered" >      this.dogAllImageArray = res.data.message;</span>
     });
   },
   methods: {
 <span class="fstat-no" title="function not covered" >    goHome() {</span>
 <span class="cstat-no" title="statement not covered" >      this.$router.push("/");</span>
-    }
-  }
+    },
+  },
 };
 &lt;/script&gt;
 &lt;style scoped&gt;
@@ -258,7 +258,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Oct 19 2020 00:52:28 GMT+0530 (India Standard Time)
+                at Thu Oct 22 2020 14:53:38 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

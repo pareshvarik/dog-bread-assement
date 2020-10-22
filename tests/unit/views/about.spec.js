@@ -27,4 +27,26 @@ describe("Inside the Search", () => {
     expect(aboutWrapper.isVueInstance).toBeTruthy();
   });
   //need to test the filter capitalize
+  //goHome
+  it("has called goHome function", () => {
+    const goHome = jest.fn();
+    aboutWrapper.setMethods({
+      goHome: goHome,
+    });
+    aboutWrapper.find("button").trigger("click");
+    expect(goHome).toHaveBeenCalled();
+  });
+
+  // it("should check if it go to home page", async () => {
+  //   const $route = {
+  //     name: "Home",
+  //   };
+  //   expect(aboutWrapper.vm.$route.name).toBe($route.name);
+  // });
+  it('has routes to home page',async ()=>{
+      const button = aboutWrapper.find('#goHome');
+      await button.trigger('click');
+      expect(aboutWrapper.vm.$route.path).toBe("/");
+  
+    })
 });

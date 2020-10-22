@@ -1,4 +1,5 @@
 import Vuex from "vuex";
+import Vue from "vue";
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import VueRouter from "vue-router";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
@@ -29,6 +30,7 @@ describe("Inside the Search", () => {
       mocks: {
         $store: mockStore,
       },
+     
     });
     afterEach(() => {
       searchWrapper.destroy();

@@ -1,13 +1,13 @@
 <template>
   <div class="about">
     <h1 class="label">
-      <i
-        >All Images of {{ dogName | capitalize }}
-        {{ dogSubBreedName | capitalize }}</i
-      >
+      <i>
+        All Images of {{ dogName | capitalize }}
+        {{ dogSubBreedName | capitalize }}
+      </i>
     </h1>
 
-    <button class="btn btn-secondary" @click="goHome()">Home</button>
+    <button id="goHome" class="btn btn-secondary" @click="goHome()">Home</button>
 
     <table>
       <tr v-for="dogImage in dogAllImageArray" :key="dogImage" class="grid">

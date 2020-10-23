@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">26.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>4/15</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>4/14</span>
             </div>
         
             
@@ -185,27 +185,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -270,9 +270,9 @@
           style="max-width: 20rem;"
           class="mb-2"
         &gt;
-          &lt;b-button @click="searchData(dog.breedName)" variant="primary"
-            &gt;Get More image&lt;/b-button
-          &gt;
+          &lt;b-button @click="searchData(dog.breedName)" variant="primary"&gt;
+            Get More image
+          &lt;/b-button&gt;
         &lt;/b-card&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -281,18 +281,18 @@
 &nbsp;
 &lt;script&gt;
 // @ is an alias to /src
-<span class="cstat-no" title="statement not covered" >import {</span>
+import {
   getAllDogsList,
   getDogRandomImage,
 } from "../service/dogApi.service.js";
-<span class="cstat-no" title="statement not covered" >import Search from "../components/Search.vue";</span>
+import Search from "../components/Search.vue";
 export default {
   name: "Home",
   components: {
     Search,
   },
-<span class="fstat-no" title="function not covered" >  data() {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data() {
+    return {
       dogsBreadList: [],
       breed: { breedName: "", breedImage: "" },
       dogObject: {},
@@ -300,8 +300,8 @@ export default {
       dogBreed: [],
     };
   },
-<span class="fstat-no" title="function not covered" >  created() {</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    getAllDogsList().then((res) =&gt; {</span></span>
+  created() {
+<span class="fstat-no" title="function not covered" >    getAllDogsList().then((res) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >      this.dogsBreadList = Object.keys(res.data.message);</span>
 <span class="cstat-no" title="statement not covered" >      this.createBreedList(this.dogsBreadList);</span>
     });
@@ -351,7 +351,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Oct 22 2020 14:53:38 GMT+0530 (India Standard Time)
+                at Fri Oct 23 2020 17:32:01 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

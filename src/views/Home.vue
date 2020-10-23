@@ -20,9 +20,9 @@
           style="max-width: 20rem;"
           class="mb-2"
         >
-          <b-button @click="searchData(dog.breedName)" variant="primary"
-            >Get More image</b-button
-          >
+          <b-button @click="searchData(dog.breedName)" variant="primary">
+            Get More image
+          </b-button>
         </b-card>
       </div>
     </div>

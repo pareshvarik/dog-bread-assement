@@ -33,4 +33,5 @@ describe("In PageNotFound Component", () => {
     const expected = "<search-stub></search-stub>";
     expect(homeWrapper.html()).toContain(expected);
   });
+  
 });

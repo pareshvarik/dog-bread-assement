@@ -1,68 +1,71 @@
-import Vuex from "vuex";
-import Vue from "vue";
-import { shallowMount, createLocalVue } from "@vue/test-utils";
-import VueRouter from "vue-router";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-import { routes } from "@/router/index";
-import search from "@/components/Search.vue";
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import Search from "@/components/Search.vue";
+import Vuex from 'vuex';
+import VueRouter from 'vue-router';
+import { routes } from '@/router/index';
 
-describe("Inside the Search", () => {
-  let searchWrapper;
+describe("Search.vue", () => {
+  let wrapper;
+
   let mockStore;
   const router = new VueRouter({ routes });
 
   beforeEach(() => {
     const localVue = createLocalVue();
-    localVue.use(VueRouter);
-    localVue.use(BootstrapVue);
-    localVue.use(IconsPlugin);
     localVue.use(Vuex);
+    localVue.use(VueRouter);
     mockStore = {
       state: {
-        dogBreedObject: {},
         dogBreedList: [],
+        dogBreedObject: { "bulldog": [
+          "boston",
+          "english",
+          "french"
+        ],
+        "african": [
+  
+        ],},
       },
       dispatch: jest.fn(),
     };
-    searchWrapper = shallowMount(search, {
-      localVue,
-      router,
+    wrapper = shallowMount(Search, {
       mocks: {
         $store: mockStore,
       },
-     
+      localVue,
+      router
     });
-    afterEach(() => {
-      searchWrapper.destroy();
-    });
+  })
+  afterEach(() => {
+    wrapper.destroy();
   });
-  it("is a Vue instance", () => {
-    expect(searchWrapper.isVueInstance).toBeTruthy();
+  it("checks whether it is a vue instance", () => {
+
+    expect(wrapper.isVueInstance()).toBeTruthy();
+  })
+  it("check select is present or not", () => {
+    expect(wrapper.find("select").exists()).toBe(true)
   });
   it("renders the correct markup", () => {
-    expect(searchWrapper.html()).toContain('<div class="Search">');
-  });
-  it("check select is present or not", () => {
-    console.log(mockStore);
-    expect(searchWrapper.find("select").exists()).toBe(true);
-  });
-  // it("checks watcher called routes", () => {
-  //   searchWrapper.setData({ searchData: 'bulldog' })
-  //   searchWrapper.vm.$options.watch.searchData.call();
-  //   expect(searchWrapper.vm.subBreed).toStrictEqual([])
-
-  // });
-  // it("checks dropdown will trigger or not", () => {
-  //   expect(wrapper.vm.searchData).toBe('');
-  //   let searchInput = wrapper.find("select");
-  //   searchInput.trigger('change');
-  //   expect(wrapper.vm.searchData).not.toBe('');
-  // })
-
-  // it("checks dropdown value", () => {
-  //   console.log(wrapper.findAll('select#dogs').length);
-  //   wrapper.findAll('select#dogs > option').at(1).element.selected=true;
-  //   wrapper.find('select#dogs').trigger('change');
-  //   expect(wrapper.vm.searchData).toEqual('pug');
-  // })
+    expect(wrapper.html()).toContain('<div class="Search">');
 });
+it('it should have a div element with class=Search', () => {
+  expect(wrapper.attributes("class")).toBe("Search");
+});
+  
+  it("checks watcher subbreed condition to true", () => {
+    wrapper.setData({ searchData: 'bulldog' })
+    wrapper.vm.$options.watch.searchData.call(wrapper.vm);
+    expect(wrapper.vm.subBreed.length).not.toBe(0);
+    wrapper.vm.$options.watch.subBreedName.call(wrapper.vm);
+    // expect(wrapper.vm.$route.path).toBe("/")
+  });
+
+  it("checks watcher subbreed condition to false", () => {
+    wrapper.setData({ searchData: 'african' })
+    wrapper.vm.$options.watch.searchData.call(wrapper.vm);
+    expect(wrapper.vm.subBreed.length).toBe(0);
+  });
+  
+});
+

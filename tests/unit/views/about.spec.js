@@ -6,7 +6,6 @@ import about from "@/views/About.vue";
 
 describe("Inside the Search", () => {
   let aboutWrapper;
-  let mockStore;
   const router = new VueRouter({ routes });
 
   beforeEach(() => {

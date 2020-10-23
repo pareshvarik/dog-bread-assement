@@ -48,19 +48,30 @@ describe("In PageNotFound Component", () => {
   // })
   it("has called goHome function", () => {
     const goHome = jest.fn();
+    const $route = {
+      name: "Home",
+    };
     pagenotfoundWrapper.setMethods({
       goHome: goHome,
     });
     pagenotfoundWrapper.find("button").trigger("click");
     expect(goHome).toHaveBeenCalled();
+    expect(pagenotfoundWrapper.vm.$route.name).toBe($route.name);
+
   });
 
-  it("should check if it go to home page", async () => {
-    const $route = {
-      name: "Home",
-    };
-    expect(pagenotfoundWrapper.vm.$route.name).toBe($route.name);
-  });
+  // it("should check if it go to home page", async () => {
+  //   const $route = {
+  //     name: "Home",
+  //   };
+  //   expect(pagenotfoundWrapper.vm.$route.name).toBe($route.name);
+  // });
+  it('has routes to home page',async ()=>{
+    const button = pagenotfoundWrapper.find('#goHome');
+    await button.trigger('click');
+    expect(pagenotfoundWrapper.vm.$route.path).toBe("/");
+
+  })
 
   // it("test the goHome",()=>{
   //   const push = jest.fn();

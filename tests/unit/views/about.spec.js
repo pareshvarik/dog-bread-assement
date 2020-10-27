@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import { routes } from "@/router/index";
 import about from "@/views/About.vue";
-
+import {capitalize} from "@/filters/wordCapitalize.js"
 describe("Inside the Search", () => {
   let aboutWrapper;
   const router = new VueRouter({ routes });
@@ -46,6 +46,10 @@ describe("Inside the Search", () => {
       const button = aboutWrapper.find('#goHome');
       await button.trigger('click');
       expect(aboutWrapper.vm.$route.path).toBe("/");
-  
     })
+    it("has make capitalize using filter",()=>{
+      expect(capitalize("actual")).toEqual("Actual")
+
+    }) 
+    
 });

@@ -18,6 +18,7 @@
 </template>
 <script>
 import { getAllDogImage } from "../service/dogApi.service.js";
+import {capitalize} from "@/filters/wordCapitalize.js";
 export default {
   name: "About",
   data() {

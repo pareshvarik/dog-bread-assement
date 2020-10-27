@@ -33,5 +33,18 @@ describe("In PageNotFound Component", () => {
     const expected = "<search-stub></search-stub>";
     expect(homeWrapper.html()).toContain(expected);
   });
+  // it('the search button',async()=>{
+  //   homeWrapper.setData({
+  //     dogBreed:['breedName: "Paresh", breedImage: "gggggg" ']
+  //   })
+  //   const button = homeWrapper.find('b-button');
+  //   console.log(homeWrapper.html());
+  //   await button.trigger('click');
+  //   expect(homeWrapper.vm.searchData).toBeCalled();
+  // })
+  // it('hhhh',()=>{
+  //   homeWrapper.vm.searchData("Paresh");
+  //   expect(homeWrapper.vm.searchDogName).toHaveBeenCalledWith("Paresh")
+  // })
   
 });

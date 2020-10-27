@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -129,27 +129,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,14 +164,14 @@
   &lt;div class="Search"&gt;
     &lt;label class="label"&gt;Search Breed &lt;/label&gt;
     &lt;select v-model="searchData"&gt;
-      &lt;option v-for="dogname in $store.state.dogBreedList" :key="dogname"&gt;{{
-        dogname
-      }}&lt;/option&gt;
+      &lt;option v-for="dogname in $store.state.dogBreedList" :key="dogname"&gt;
+        {{ dogname }}
+      &lt;/option&gt;
     &lt;/select&gt;
     &lt;span v-if="subBreed.length &gt; 0"&gt;
       &lt;label class="label"&gt;Please select sub breed of {{ searchData }} &lt;/label&gt;
       &lt;select v-model="subBreedName"&gt;
-        &lt;option v-for="sb in subBreed" :key="sb"&gt;{{ sb }}&lt;/option&gt;
+        &lt;option v-for="subbread in subBreed" :key="subbread"&gt;{{ subbread }}&lt;/option&gt;
       &lt;/select&gt;
     &lt;/span&gt;
   &lt;/div&gt;
@@ -180,28 +180,28 @@
 &lt;script&gt;
 export default {
   name: "Search",
-  data() {
-    return {
+<span class="fstat-no" title="function not covered" >  data() {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
       searchData: "",
       subBreed: [],
       subBreedName: "",
     };
   },
-  created() {
-    this.$store.dispatch("getAllBreadObject");
-    this.$store.dispatch("getAllBreadList");
+<span class="fstat-no" title="function not covered" >  created() {</span>
+<span class="cstat-no" title="statement not covered" >    this.$store.dispatch("getAllBreadObject");</span>
+<span class="cstat-no" title="statement not covered" >    this.$store.dispatch("getAllBreadList");</span>
   },
   watch: {
-    searchData() {
-      if (this.$store.state.dogBreedObject[this.searchData].length &gt; 0) {
-        this.subBreed = this.$store.state.dogBreedObject[this.searchData];
+<span class="fstat-no" title="function not covered" >    searchData() {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.$store.state.dogBreedObject[this.searchData].length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.subBreed = this.$store.state.dogBreedObject[this.searchData];</span>
       } else {
-        this.$router.push({ name: "About", params: { name: this.searchData } });
+<span class="cstat-no" title="statement not covered" >        this.$router.push({ name: "About", params: { name: this.searchData } });</span>
       }
     },
-    subBreedName() {
-<span class="missing-if-branch" title="else path not taken" >E</span>      if (this.subBreed.length &gt; 0) {
-        this.$router.push({
+<span class="fstat-no" title="function not covered" >    subBreedName() {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.subBreed.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.$router.push({</span>
           name: "About",
           params: { name: this.searchData, subbreedname: this.subBreedName },
         });
@@ -219,7 +219,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Oct 27 2020 09:12:08 GMT+0530 (India Standard Time)
+                at Tue Oct 27 2020 14:15:07 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

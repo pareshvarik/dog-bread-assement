@@ -51,9 +51,6 @@ npm run lint
 * Vuex Standards: Mutations: PascalCase, Actions : camelCase
                   
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 
 

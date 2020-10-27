@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { getAllBread, getAllDogsList } from "../service/dogApi.service.js";
+import { getAllDogsList } from "../service/dogApi.service.js";
 
 Vue.use(Vuex);
 
@@ -20,7 +20,7 @@ export default new Vuex.Store({
 
   actions: {
     async getAllBreadObject(state) {
-      let dogBreedListResult = await getAllBread();
+      let dogBreedListResult = await getAllDogsList();
       let dogBreedList = dogBreedListResult.data["message"];
       state.commit("setBreedObject", dogBreedList);
     },

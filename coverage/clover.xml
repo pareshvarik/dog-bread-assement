@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603454521767" clover="3.2.0">
-  <project timestamp="1603454521768" name="All files">
-    <metrics statements="50" coveredstatements="23" conditionals="6" coveredconditionals="1" methods="27" coveredmethods="13" elements="83" coveredelements="37" complexity="0" loc="50" ncloc="50" packages="7" files="10" classes="10"/>
+<coverage generated="1603770128421" clover="3.2.0">
+  <project timestamp="1603770128421" name="All files">
+    <metrics statements="50" coveredstatements="28" conditionals="6" coveredconditionals="4" methods="27" coveredmethods="15" elements="83" coveredelements="47" complexity="0" loc="50" ncloc="50" packages="7" files="10" classes="10"/>
     <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.vue" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\App.vue">
@@ -10,22 +10,22 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="10" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="3"/>
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="5"/>
       <file name="Footer.vue" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\components\Footer.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="2" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
       </file>
       <file name="Search.vue" path="C:\Users\pvarik\Desktop\ABN AMRO\vue-project\dog-bread\src\components\Search.vue">
-        <metrics statements="8" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="42" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="34" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="42" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.filters">

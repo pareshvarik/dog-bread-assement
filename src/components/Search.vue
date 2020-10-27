@@ -2,14 +2,14 @@
   <div class="Search">
     <label class="label">Search Breed </label>
     <select v-model="searchData">
-      <option v-for="dogname in $store.state.dogBreedList" :key="dogname">{{
-        dogname
-      }}</option>
+      <option v-for="dogname in $store.state.dogBreedList" :key="dogname">
+        {{ dogname }}
+      </option>
     </select>
     <span v-if="subBreed.length > 0">
       <label class="label">Please select sub breed of {{ searchData }} </label>
       <select v-model="subBreedName">
-        <option v-for="sb in subBreed" :key="sb">{{ sb }}</option>
+        <option v-for="subbread in subBreed" :key="subbread">{{ subbread }}</option>
       </select>
     </span>
   </div>

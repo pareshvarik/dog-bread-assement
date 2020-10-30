@@ -9,7 +9,9 @@
     <span v-if="subBreed.length > 0">
       <label class="label">Please select sub breed of {{ searchData }} </label>
       <select v-model="subBreedName">
-        <option v-for="subbread in subBreed" :key="subbread">{{ subbread }}</option>
+        <option v-for="subbread in subBreed" :key="subbread">
+          {{ subbread }}
+        </option>
       </select>
     </span>
   </div>
@@ -38,15 +40,11 @@ export default {
       }
     },
     subBreedName() {
-      if (this.subBreed.length > 0) {
-        this.$router.push({
-          name: "About",
-          params: { name: this.searchData, subbreedname: this.subBreedName },
-        });
-      }
+      this.$router.push({
+        name: "About",
+        params: { name: this.searchData, subbreedname: this.subBreedName },
+      });
     },
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

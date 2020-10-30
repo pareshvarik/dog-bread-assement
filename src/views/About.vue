@@ -1,24 +1,31 @@
 <template>
   <div class="about">
-    <h1 class="label">
-      <i>
-        All Images of {{ dogName | capitalize }}
-        {{ dogSubBreedName | capitalize }}
-      </i>
-    </h1>
+    <!-- <div v-if="this.dogAllImageArray.length > 0"> -->
+      <h1 class="label">
+        <i>
+          All Images of {{ dogName | capitalize }}
+          {{ dogSubBreedName | capitalize }}
+        </i>
+      </h1>
 
-    <button id="goHome" class="btn btn-secondary" @click="goHome()">Home</button>
+      <button id="goHome" class="btn btn-secondary" @click="goHome()">
+        Home
+      </button>
 
-    <table>
-      <tr v-for="dogImage in dogAllImageArray" :key="dogImage" class="grid">
-        <img :src="dogImage" class="dogimage" />
-      </tr>
-    </table>
+      <table>
+        <tr v-for="dogImage in dogAllImageArray" :key="dogImage" class="grid">
+          <img :src="dogImage" class="dogimage" />
+        </tr>
+      </table>
+    <!-- </div>
+    <div v-if="this.dogAllImageArray.length < 0">
+      page not found
+    </div> -->
   </div>
 </template>
 <script>
 import { getAllDogImage } from "../service/dogApi.service.js";
-import {capitalize} from "@/filters/wordCapitalize.js";
+// import {capitalize} from "@/filters/wordCapitalize.js";
 export default {
   name: "About",
   data() {

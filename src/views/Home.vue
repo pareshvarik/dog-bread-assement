@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
-    <b-navbar toggleable="lg" type="dark" variant="info">
+  <div class="Home">
+    <!-- <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">Dog Breed Application</b-navbar-brand>
       <b-navbar-nav class="ml-auto" >
         <search />
       </b-navbar-nav>
-    </b-navbar>
+    </b-navbar> -->
     <!-- cards to display dog -->
     <div v-for="dog in dogBreed" :key="dog.breedName">
       <div class="cardbody">
@@ -15,6 +15,7 @@
           img-alt="Image"
           img-height="200"
           img-width="200"
+          object-fit="cover"
           img-top
           tag="article"
           style="max-width: 20rem;"
@@ -35,12 +36,12 @@ import {
   getAllDogsList,
   getDogRandomImage,
 } from "../service/dogApi.service.js";
-import Search from "../components/Search.vue";
+// import Search from "../components/Search.vue";
 export default {
   name: "Home",
-  components: {
-    Search,
-  },
+  // components: {
+  //   Search,
+  // },
   data() {
     return {
       dogsBreadList: [],

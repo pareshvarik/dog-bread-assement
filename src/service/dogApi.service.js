@@ -14,6 +14,7 @@ export function getAllDogImage(dogname, subbreedname) {
     );
   }
 }
+//axios 
 // export function getHomeDogRandomImage() {
 //   return axios.get(`https://dog.ceo/api/breeds/image/random/48`);
 // }

@@ -1,8 +1,8 @@
 <template>
   <div class="Search">
     <label class="label">Search Breed </label>
-    <select v-model="searchData">
-      <option v-for="dogname in $store.state.dogBreedList" :key="dogname">
+    <select name="service"  formControlName="service" class="form-control shadow-none" style="width:auto" v-model="searchData">
+      <option  v-for="dogname in $store.state.dogBreedList" :key="dogname">
         {{ dogname }}
       </option>
     </select>

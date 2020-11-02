@@ -2,7 +2,7 @@
   <div class="home">
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand href="#">Dog Breed Application</b-navbar-brand>
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav class="ml-auto" >
         <search />
       </b-navbar-nav>
     </b-navbar>

@@ -37,7 +37,7 @@ describe("In PageNotFound Component", () => {
   //   expect(goHome).toHaveBeenCalled();
   // });
   it("it renders the correct markup", () => {
-    const expected = '<div class="jumbotron">';
+    const expected = '<div class="jumbotron jumbotron-fluid">';
     expect(pagenotfoundWrapper.html()).toContain(expected);
   });
   // it('has routes to home page',async ()=>{

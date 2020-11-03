@@ -24,15 +24,7 @@ describe("In PageNotFound Component", () => {
   it("is a Vue instance", () => {
     expect(homeWrapper.isVueInstance).toBeTruthy();
   });
-  it('it renders the <b-navbar-stub tag="nav" type="dark" variant="info" toggleable="lg"> ', () => {
-    const expected =
-      '<b-navbar-stub tag="nav" type="dark" variant="info" toggleable="lg">';
-    expect(homeWrapper.html()).toContain(expected);
-  });
-  it("it renders the correct markup", () => {
-    const expected = "<search-stub></search-stub>";
-    expect(homeWrapper.html()).toContain(expected);
-  });
+  
   // it('the search button',async()=>{
   //   homeWrapper.setData({
   //     dogBreed:['breedName: "Paresh", breedImage: "gggggg" ']

@@ -1,8 +1,8 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { shallowMount, createLocalVue } from "@vue/test-utils";
 import Search from "@/components/Search.vue";
-import Vuex from 'vuex';
-import VueRouter from 'vue-router';
-import { routes } from '@/router/index';
+import Vuex from "vuex";
+import VueRouter from "vue-router";
+import { routes } from "@/router/index";
 
 describe("Search.vue", () => {
   let wrapper;
@@ -17,14 +17,10 @@ describe("Search.vue", () => {
     mockStore = {
       state: {
         dogBreedList: [],
-        dogBreedObject: { "bulldog": [
-          "boston",
-          "english",
-          "french"
-        ],
-        "african": [
-  
-        ],},
+        dogBreedObject: {
+          bulldog: ["boston", "english", "french"],
+          african: [],
+        },
       },
       dispatch: jest.fn(),
     };
@@ -33,28 +29,27 @@ describe("Search.vue", () => {
         $store: mockStore,
       },
       localVue,
-      router
+      router,
     });
-  })
+  });
   afterEach(() => {
     wrapper.destroy();
   });
   it("checks whether it is a vue instance", () => {
-
     expect(wrapper.isVueInstance()).toBeTruthy();
-  })
+  });
   it("check select is present or not", () => {
-    expect(wrapper.find("select").exists()).toBe(true)
+    expect(wrapper.find("select").exists()).toBe(true);
   });
   it("renders the correct markup", () => {
     expect(wrapper.html()).toContain('<div class="Search">');
-});
-it('it should have a div element with class=Search', () => {
-  expect(wrapper.attributes("class")).toBe("Search");
-});
-  
+  });
+  it("it should have a div element with class=Search", () => {
+    expect(wrapper.attributes("class")).toBe("Search");
+  });
+
   it("checks watcher subbreed condition to true", () => {
-    wrapper.setData({ searchData: 'bulldog' })
+    wrapper.setData({ searchData: "bulldog" });
     wrapper.vm.$options.watch.searchData.call(wrapper.vm);
     expect(wrapper.vm.subBreed.length).not.toBe(0);
     wrapper.vm.$options.watch.subBreedName.call(wrapper.vm);
@@ -62,10 +57,8 @@ it('it should have a div element with class=Search', () => {
   });
 
   it("checks watcher subbreed condition to false", () => {
-    wrapper.setData({ searchData: 'african' })
+    wrapper.setData({ searchData: "african" });
     wrapper.vm.$options.watch.searchData.call(wrapper.vm);
     expect(wrapper.vm.subBreed.length).toBe(0);
   });
-  
 });
-

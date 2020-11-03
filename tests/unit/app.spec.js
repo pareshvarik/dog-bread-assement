@@ -2,20 +2,7 @@ import { shallowMount, createLocalVue } from "@vue/test-utils";
 import VueRouter from "vue-router";
 import app from "@/App.vue";
 import footer from "@/components/Footer.vue";
-// describe("HelloWorld.vue", () => {
-//   it("renders props.msg when passed", () => {
-//     const msg = "new message";
-//     const wrapper = shallowMount(HelloWorld, {
-//       propsData: { msg }
-//     });
-//     expect(wrapper.text()).toMatch(msg);
-//   });
-// });
-
-// it("checks whether it is a vue instance",()=>{
-//   const wrapper = shallowMount(Search);
-//   expect(wrapper.isVueInstance()).toBeTruthy();
-// })
+import header from "@/components/Header.vue";
 
 describe("In App Component", () => {
   let appWrapper;
@@ -41,10 +28,19 @@ describe("In App Component", () => {
   it("renders the correct markup", () => {
     expect(appWrapper.html()).toContain('<div id="app">');
   });
-
   it('it should have a div element with id="app"', () => {
     expect(appWrapper.attributes("id")).toBe("app");
   });
+
+  //for header tag testing
+  it("it should load the footer", () => {
+    expect(footer).toBeTruthy();
+  });
+  it("it should have a <header-stub></header-stub>", () => {
+    expect(appWrapper.html()).toContain("<header-stub></header-stub>");
+  });
+
+  
   //for router tag tesing
   it("it should have a <router-view-stub></router-view-stub>", () => {
     expect(appWrapper.html()).toContain(
@@ -56,7 +52,6 @@ describe("In App Component", () => {
   it("it should load the footer", () => {
     expect(footer).toBeTruthy();
   });
-
   it("it should have a <footer-stub></footer-stub>", () => {
     expect(appWrapper.html()).toContain("<footer-stub></footer-stub>");
   });

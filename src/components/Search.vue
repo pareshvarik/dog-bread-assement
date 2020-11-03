@@ -6,14 +6,14 @@
         {{ dogname }}
       </option>
     </select>
-    <span v-if="subBreed.length > 0">
+    <div v-if="subBreed.length > 0">
       <label class="label">Please select sub breed of {{ searchData }} </label>
       <select v-model="subBreedName">
         <option v-for="subbread in subBreed" :key="subbread">
           {{ subbread }}
         </option>
       </select>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -48,3 +48,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* large screen */
+@media(min-width: 1200px)
+{
+  .Search{
+    width: 100%
+  }
+}
+/* medium screen */
+@media(min-width:992px) and (max-width: 1199px) {
+  
+}
+</style>

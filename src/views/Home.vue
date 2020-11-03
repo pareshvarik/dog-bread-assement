@@ -1,12 +1,5 @@
 <template>
   <div class="Home">
-    <!-- <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">Dog Breed Application</b-navbar-brand>
-      <b-navbar-nav class="ml-auto" >
-        <search />
-      </b-navbar-nav>
-    </b-navbar> -->
-    <!-- cards to display dog -->
     <div v-for="dog in dogBreed" :key="dog.breedName">
       <div class="cardbody">
         <b-card
